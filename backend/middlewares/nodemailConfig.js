@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-module.exports.nodemailConfig = (req, res) => {
+module.exports.nodemailConfig = (req, res, next) => {
 	
 	const { name, phone, email, title } = req.body;
 
@@ -27,8 +27,8 @@ module.exports.nodemailConfig = (req, res) => {
 
 	transporter
 		.sendMail(mailOptions)
-		.then(() => res.send('Отличное начало!'))
+		.then(() => res.send({ message: 'Ok' }))
 		.catch((err) => {
 			console.log(err.message);
-		});
+		})
 };
