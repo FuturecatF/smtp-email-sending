@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./pages/index.css" />
+		<title>Тест отправка формы на почту</title>
+	</head>
+
+	<body class="page">
+		<div class="page__container">
+			<main class="content">
+				<section class="elements">
+					<ul class="elements__container">
+						<li class="element">
+							<img
+								class="element__photo"
+								src="./images/kreslo-norm.jpg"
+								alt="Картинка кресла"
+							/>
+							<h4 class="element__title">
+								№1 Парикмахерское кресло «Норм» Гидравлическое
+							</h4>
+							<p class="element__price">9 900 &#8381;</p>
+							<button class="element__button">Купить</button>
+						</li>
+						<li class="element">
+							<img
+								class="element__photo"
+								src="./images/kreslo-norm.jpg"
+								alt="Картинка кресла"
+							/>
+							<h4 class="element__title">
+								№2 Парикмахерское кресло «Норм» Гидравлическое
+							</h4>
+							<p class="element__price">9 900 &#8381;</p>
+							<button class="element__button">Купить</button>
+						</li>
+						<li class="element">
+							<img
+								class="element__photo"
+								src="./images/kreslo-norm.jpg"
+								alt="Картинка кресла"
+							/>
+							<h4 class="element__title">
+								№3 Парикмахерское кресло «Норм» Гидравлическое
+							</h4>
+							<p class="element__price">9 900 &#8381;</p>
+
+							<button class="element__button">Купить</button>
+						</li>
+						<li class="element">
+							<img
+								class="element__photo"
+								src="./images/kreslo-norm.jpg"
+								alt="Картинка кресла"
+							/>
+							<h4 class="element__title">
+								№4 Парикмахерское кресло «Норм» Гидравлическое
+							</h4>
+							<p class="element__price">9 900 &#8381;</p>
+							<button class="element__button">Купить</button>
+						</li>
+					</ul>
+				</section>
+			</main>
+
+			<div class="popup">
+				<div class="popup__container">
+					<h2 class="popup__title">Быстрый заказ</h2>
+					<form class="popup__form">
+						<input
+							class="popup__input"
+							type="text"
+							name="name"
+							placeholder="Имя"
+							id="name"
+							required
+						/>
+						<input
+							class="popup__input"
+							type="tel"
+							name="phone"
+							placeholder="Телефон"
+							id="phone"
+							required
+						/>
+						<input
+							class="popup__input"
+							type="email"
+							name="email"
+							placeholder="Email"
+							id="email"
+							required
+						/>
+						<input
+							class="popup__input"
+							type="text"
+							name="title"
+							placeholder="Название товара"
+							id="title"
+							required
+						/>
+						<button class="popup__button" type="submit">Заказать</button>
+					</form>
+					<button
+						class="popup__close"
+						type="button"
+						aria-label="Закрыть форму"
+					></button>
+				</div>
+			</div>
+		</div>
+		<script src="./utils/api.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>
