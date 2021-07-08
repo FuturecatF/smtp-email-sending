@@ -3,15 +3,13 @@ const form = popup.querySelector('.popup__form');
 const btnClose = popup.querySelector('.popup__close');
 const btnForm = popup.querySelector('.popup__button');
 
-let title = 0;
-
 const api = new Api({
 	baseUrl: 'http://localhost:3001',
 	headers: {
 		'Content-type': 'application/json',
 	},
 });
-function getProductName() {
+function getProductName(title) {
 	form.querySelector('#title').value = title.trim();
 }
 
@@ -54,8 +52,8 @@ function closePopup() {
 
 function openPopup(e) {
 	const element = e.target.closest('.element');
-	title = element.querySelector('.element__title').textContent;
-	getProductName();
+	const title = element.querySelector('.element__title').textContent;
+	getProductName(title);
 	btnClose.addEventListener('click', closePopup);
 	form.addEventListener('submit', sendEmail);
 	popup.classList.add('popup_opened');
